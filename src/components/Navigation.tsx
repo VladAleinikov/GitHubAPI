@@ -3,10 +3,16 @@ import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <nav className="flex justify-between px-5 h-[50px] bg-gray-200 items-center shadow-md">
-      <Link to="/">Airport</Link>
-      <Link to="/auth">Auth</Link>
-    </nav>
+    <header className="flex justify-between items-center h-[50px] px-5 shadow-md bg-gray-500 text-white">
+      <h3>GitHub Search</h3>
+
+      <nav>
+        <Link to="/" className="mr-2">
+          Home
+        </Link>
+        <Link to="/favourites">Favourites</Link>
+      </nav>
+    </header>
   );
 };
 

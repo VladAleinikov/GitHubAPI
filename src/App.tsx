@@ -1,8 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router';
-import MainPage from './pages/MainPage';
-import AuthPage from './pages/AuthPage';
-import AirportDetailPage from './pages/AirportDetailPage';
+import HomePage from './pages/HomePage';
+import FavouritesPage from './pages/FavouritesPage';
 import Navigation from './components/Navigation';
 
 function App() {
@@ -10,9 +9,8 @@ function App() {
     <>
       <Navigation/>
       <Routes>
-        <Route path='/' element={<MainPage />} />
-        <Route path='/auth' element={<AuthPage />} />
-        <Route path='/airport/:id' element={<AirportDetailPage />} />
+        <Route path='/' element={<HomePage />} />
+        <Route path='/favourite' element={<FavouritesPage />} />
       </Routes>
     </>
   );
