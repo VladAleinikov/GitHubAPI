@@ -5,7 +5,7 @@ import { StringMappingType } from "typescript";
 import RepoCard from "../components/RepoCard";
 
 const HomePage = () => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("VladAleinikov");
   const [dropdown, setDropdown] = useState(false)
   const debounced = useDebounce(search);
   const { isLoading, isError, data } = useSearchUsersQuery(debounced, {
