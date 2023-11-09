@@ -1,9 +1,20 @@
 import React from 'react';
+import { Route, Routes } from 'react-router';
+import MainPage from './pages/MainPage';
+import AuthPage from './pages/AuthPage';
+import AirportDetailPage from './pages/AirportDetailPage';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <>
+      <Navigation/>
+      <Routes>
+        <Route path='/' element={<MainPage />} />
+        <Route path='/auth' element={<AuthPage />} />
+        <Route path='/airport/:id' element={<AirportDetailPage />} />
+      </Routes>
+    </>
   );
 }
 
